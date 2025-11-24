@@ -1,363 +1,916 @@
 {
-"hotels": [{
-    "id" : "0248058a-27e4-11e6-ace6-a9876eff01b3",
-    "type" : "hotel",
-    "name" : "Motif Seattle",
-    "created" : 1464777092568,
-    "modified" : 1464777618676,
-    "address1" : "1415 5th Ave",
-    "airportCode" : "SEA",
-    "amenityMask" : 7798786,
-    "city" : "Seattle",
-    "confidenceRating" : 52,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/125727/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 289,
-    "hotelId" : 1257278,
-    "hotelInDestination" : true,
-    "hotelRating" : 4,
-    "location" : {
-      "latitude" : 47.60985,
-      "longitude" : -122.33475
+  "destinations": {
+    "beach": [
+      {
+        "id": "1",
+        "name": "Rio de Janeiro",
+        "location": "Rio de Janeiro State, Brazil",
+        "price": 2585,
+        "image": "https://images.unsplash.com/photo-1679957631642-94f406206544?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxSaW8lMjBkZSUyMEphbmVpcm8lMjBiZWFjaHxlbnwxfHx8fDE3NjM3MDc5NjJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      },
+      {
+        "id": "2",
+        "name": "San Juan",
+        "location": "Puerto Rico",
+        "price": 5696,
+        "image": "https://images.unsplash.com/photo-1564238750394-08cb8e37b7e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxTYW4lMjBKdWFuJTIwUHVlcnRvJTIwUmljbyUyMGZvcnR8ZW58MXx8fHwxNzYzNzA3OTYzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      },
+      {
+        "id": "3",
+        "name": "Miami Beach",
+        "location": "Florida, United States of America",
+        "price": 5589,
+        "image": "https://images.unsplash.com/photo-1581271414285-8f702bc49eea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxNaWFtaSUyMEJlYWNoJTIwaG90ZWxzfGVufDF8fHx8MTc2MzcwNzk2M3ww&ixlib=rb-4.1.0&q=80&w=1080"
+      },
+      {
+        "id": "4",
+        "name": "Oranjestad",
+        "location": "Aruba",
+        "price": 4823,
+        "image": "https://images.unsplash.com/photo-1719710384057-1f6944ab531e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxPcmFuamVzdGFkJTIwQXJ1YmElMjBoYXJib3J8ZW58MXx8fHwxNzYzNzA3OTY0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+      },
+      {
+        "id": "5",
+        "name": "Montego Bay",
+        "location": "Saint James, Jamaica",
+        "price": 3912,
+        "image": "https://images.unsplash.com/photo-1558031715-5c8d48b508bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxNb250ZWdvJTIwQmF5JTIwSmFtYWljYXxlbnwxfHx8fDE3NjM3MDc5NjR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      }
+    ],
+    "culture": [
+      {
+        "id": "6",
+        "name": "Cairo",
+        "location": "Egypt",
+        "price": 1850,
+        "image": "https://images.unsplash.com/photo-1723465308831-29da05e011f3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob3RlbCUyMGV4dGVyaW9yfGVufDF8fHx8MTc2MzUzODAyN3ww&ixlib=rb-4.1.0&q=80&w=1080"
+      },
+      {
+        "id": "7",
+        "name": "Rome",
+        "location": "Italy",
+        "price": 3200,
+        "image": "https://images.unsplash.com/photo-1515263487990-61b07816b324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcGFydG1lbnQlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjM1NDI1NzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      }
+    ],
+    "ski": [
+      {
+        "id": "8",
+        "name": "Aspen",
+        "location": "Colorado, USA",
+        "price": 6800,
+        "image": "https://images.unsplash.com/photo-1482192505345-5655af888cc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb3VudGFpbiUyMGNhYmlufGVufDF8fHx8MTc2MzU1NjQxNXww&ixlib=rb-4.1.0&q=80&w=1080"
+      }
+    ],
+    "family": [
+      {
+        "id": "9",
+        "name": "Orlando",
+        "location": "Florida, USA",
+        "price": 2950,
+        "image": "https://images.unsplash.com/photo-1559022615-cd4628902d4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0aGVtZSUyMHBhcmt8ZW58MXx8fHwxNzYzNzA4MDAxfDA&ixlib=rb-4.1.0&q=80&w=1080"
+      }
+    ],
+    "wellness": [
+      {
+        "id": "10",
+        "name": "Tulum",
+        "location": "Quintana Roo, Mexico",
+        "price": 3500,
+        "image": "https://images.unsplash.com/photo-1596178065887-8f180b53e7b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3ZWxsbmVzcyUyMHJlc29ydHxlbnwxfHx8fDE3NjM3MDgwMDJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+      }
+    ]
+  },
+  "featuredStays": [
+    {
+      "image": "https://images.unsplash.com/photo-1515263487990-61b07816b324?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcGFydG1lbnQlMjBidWlsZGluZ3xlbnwxfHx8fDE3NjM1NDI1NzF8MA&ixlib=rb-4.0.0&q=80&w=1080",
+      "title": "Urbanza Suites",
+      "address": "Main Road 123 Street , 23 Colony",
+      "rating": 4.5,
+      "price": 399,
+      "bestSeller": true
     },
-    "locationDescription" : "Near Pike Place Market",
-    "lowRate" : 259,
-    "metadata" : {
-      "path" : "/hotels/0248058a-27e4-11e6-ace6-a9876eff01b3"
+    {
+      "image": "https://images.trvl-media.com/lodging/75000000/74900000/74892600/74892548/99e837db.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "title": "Urbanza Suites",
+      "address": "Main Road 123 Street , 23 Colony",
+      "rating": 4.5,
+      "price": 299
     },
-    "postalCode" : 98101,
-    "propertyCategory" : 1,
-    "proximityDistance" : 11.168453,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at Motif Seattle, you will be centrally located in Seattle, steps from 5th Avenue Theater and minutes from Pike Place Market. This 4-star hotel is within",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/50947_264_t.jpg",
-    "tripAdvisorRating" : 3.5,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/3.5-12345-4.gif"
-  }, {
-    "id" : "024bd61a-27e4-11e6-ad95-35ed01160e57",
-    "type" : "hotel",
-    "name" : "The Westin Seattle",
-    "created" : 1464777092593,
-    "modified" : 1464871217352,
-    "address1" : "1900 5th Ave",
-    "airportCode" : "SEA",
-    "amenityMask" : 7806977,
-    "city" : "Seattle",
-    "confidenceRating" : 5,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/164122/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 259,
-    "hotelId" : 164122,
-    "hotelInDestination" : true,
-    "hotelRating" : 4,
-    "location" : {
-      "latitude" : 47.61309,
-      "longitude" : -122.33788
+    {
+      "image": "https://images.trvl-media.com/lodging/121000000/120090000/120081500/120081412/e057a1cd.jpg?impolicy=fcrop&w=1200&h=800&quality=medium",
+      "title": "Urbanza Suites",
+      "address": "Main Road 123 Street , 23 Colony",
+      "rating": 4.5,
+      "price": 249,
+      "bestSeller": true
     },
-    "locationDescription" : "Near Pike Place Market",
-    "lowRate" : 209,
-    "metadata" : {
-      "path" : "/hotels/024bd61a-27e4-11e6-ad95-35ed01160e57"
+    {
+      "image": "https://images.trvl-media.com/lodging/121000000/120090000/120081500/120081412/f149f6ed.jpg?impolicy=resizecrop&rw=1200&ra=fit",
+      "title": "Urbanza Suites",
+      "address": "Main Road 123 Street , 23 Colony",
+      "rating": 4.5,
+      "price": 199
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Hotel Riu Cancun - Adults Only",
+      "city": "Cancun",
+      "country": "Mexico"
     },
-    "postalCode" : 98101,
-    "propertyCategory" : 1,
-    "proximityDistance" : 11.335604,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at The Westin Seattle, you'll be centrally laocated in Seattle, steps from Westlake Center and minutes from Pacific Place. This 4-star hotel is close to",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/16673_260_t.jpg",
-    "tripAdvisorRating" : 4,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif"
-  }, {
-    "id" : "024fcdba-27e4-11e6-af44-cd4c8e537e9c",
-    "type" : "hotel",
-    "name" : "Sheraton Seattle Hotel",
-    "created" : 1464777092619,
-    "modified" : 1464777092619,
-    "address1" : "1400 6th Ave",
-    "airportCode" : "SEA",
-    "amenityMask" : 262147,
-    "city" : "Seattle",
-    "confidenceRating" : 30,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/164116/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 320,
-    "hotelId" : 164116,
-    "hotelInDestination" : true,
-    "hotelRating" : 4,
-    "location" : {
-      "latitude" : 47.61017,
-      "longitude" : -122.33357
+    {
+      "id": 2,
+      "name": "Hilton Cairo Nile",
+      "city": "Cairo",
+      "country": "Egypt"
     },
-    "locationDescription" : "Near Pike Place Market",
-    "lowRate" : 205,
-    "metadata" : {
-      "path" : "/hotels/024fcdba-27e4-11e6-af44-cd4c8e537e9c"
+    {
+      "id": 3,
+      "name": "Marriott Mena House",
+      "city": "Giza",
+      "country": "Egypt"
     },
-    "postalCode" : 98101,
-    "propertyCategory" : 1,
-    "proximityDistance" : 11.115907,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at Sheraton Seattle Hotel, you'll be centrally located in Seattle, steps from 5th Avenue Theater and Washington State Convention Center. This 4-star",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/25290_88_t.jpg",
-    "tripAdvisorRating" : 4,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif"
-  }, {
-    "id" : "0253773a-27e4-11e6-8ffe-278d3b0d044c",
-    "type" : "hotel",
-    "name" : "The Edgewater - A Noble House Hotel",
-    "created" : 1464777092643,
-    "modified" : 1464777092643,
-    "address1" : "Pier 67, 2411 Alaskan Way",
-    "airportCode" : "SEA",
-    "amenityMask" : 5701635,
-    "city" : "Burlingame",
-    "confidenceRating" : 95,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/127092/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 269,
-    "hotelId" : 127092,
-    "hotelInDestination" : true,
-    "hotelRating" : 4,
-    "location" : {
-      "latitude" : 47.61252,
-      "longitude" : -122.35013
+    {
+      "id": 4,
+      "name": "Steigenberger Hotel",
+      "city": "Alexandria",
+      "country": "Egypt"
     },
-    "locationDescription" : "Near Pike Place Market",
-    "lowRate" : 179,
-    "metadata" : {
-      "path" : "/hotels/0253773a-27e4-11e6-8ffe-278d3b0d044c"
+    {
+      "id": 5,
+      "name": "Sofitel Legend Old Cataract",
+      "city": "Aswan",
+      "country": "Egypt"
     },
-    "postalCode" : 98121,
-    "propertyCategory" : 1,
-    "proximityDistance" : 11.898841,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at The Edgewater - A Noble House Hotel, you'll be centrally located in Seattle, steps from Bell Street Cruise Terminal at Pier 66 and minutes from",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/11133_169_t.jpg",
-    "tripAdvisorRating" : 4,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif"
-  }, {
-    "id" : "025720ba-27e4-11e6-8744-efc6f2251051",
-    "type" : "hotel",
-    "name" : "Hotel Max, a Provenance Hotel",
-    "created" : 1464777092667,
-    "modified" : 1464777092667,
-    "address1" : "620 Stewart St",
-    "airportCode" : "SEA",
-    "amenityMask" : 3,
-    "city" : "Burlingame",
-    "confidenceRating" : 52,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/113426/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 188.202,
-    "hotelId" : 113426,
-    "hotelInDestination" : true,
-    "hotelRating" : 3.5,
-    "location" : {
-      "latitude" : 47.61381,
-      "longitude" : -122.33686
+    {
+      "id": 6,
+      "name": "Four Seasons Sharm El Sheikh",
+      "city": "Sharm El Sheikh",
+      "country": "Egypt"
     },
-    "locationDescription" : "Near Pike Place Market",
-    "lowRate" : 187.202,
-    "metadata" : {
-      "path" : "/hotels/025720ba-27e4-11e6-8744-efc6f2251051"
+    {
+      "id": 7,
+      "name": "Kempinski Soma Bay",
+      "city": "Hurghada",
+      "country": "Egypt"
     },
-    "postalCode" : 98101,
-    "propertyCategory" : 1,
-    "proximityDistance" : 11.293709,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at Hotel Max, a Provenance Hotel in Seattle (Belltown), you&apos;ll be minutes from Westlake Center and Washington State Convention Center. This hotel is",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/28647_30_t.jpg",
-    "tripAdvisorRating" : 4,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif"
-  }, {
-    "id" : "025b3f6a-27e4-11e6-80d7-1ba3f907ab71",
-    "type" : "hotel",
-    "name" : "Hotel Monaco Seattle, a Kimpton Hotel",
-    "created" : 1464777092694,
-    "modified" : 1464777092694,
-    "address1" : "1101 4th Ave",
-    "airportCode" : "SEA",
-    "amenityMask" : 1310720,
-    "city" : "Seattle",
-    "confidenceRating" : 52,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/132138/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 489,
-    "hotelId" : 132138,
-    "hotelInDestination" : true,
-    "hotelRating" : 4,
-    "location" : {
-      "latitude" : 47.60682,
-      "longitude" : -122.33358
+    {
+      "id": 8,
+      "name": "Rixos Premium Dubai",
+      "city": "Dubai",
+      "country": "UAE"
     },
-    "locationDescription" : "Near Pike Place Market",
-    "lowRate" : 189,
-    "metadata" : {
-      "path" : "/hotels/025b3f6a-27e4-11e6-80d7-1ba3f907ab71"
+    {
+      "id": 9,
+      "name": "Burj Al Arab",
+      "city": "Dubai",
+      "country": "UAE"
     },
-    "postalCode" : 98101,
-    "propertyCategory" : 1,
-    "proximityDistance" : 11.097676,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at Hotel Monaco Seattle, a Kimpton Hotel, you&apos;ll be centrally located in Seattle, steps from Seattle Public Library and Safeco Headquarters. This 4-star",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/62800_122_t.jpg",
-    "tripAdvisorRating" : 4.5,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.5-12345-4.gif"
-  }, {
-    "id" : "025f5e1a-27e4-11e6-a36c-9fede5552112",
-    "type" : "hotel",
-    "name" : "Hotel Deca - A Noble House Hotel",
-    "created" : 1464777092721,
-    "modified" : 1464777092721,
-    "address1" : "4507 Brooklyn Avenue NE",
-    "airportCode" : "SEA",
-    "amenityMask" : 3,
-    "city" : "Burlingame",
-    "confidenceRating" : 95,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/191964/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 159,
-    "hotelId" : 191964,
-    "hotelInDestination" : true,
-    "hotelRating" : 3.5,
-    "location" : {
-      "latitude" : 47.66143,
-      "longitude" : -122.31429
+    {
+      "id": 10,
+      "name": "Ritz Carlton Paris",
+      "city": "Paris",
+      "country": "France"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Standard Double Room, Ocean View (U)",
+      "images": ["/room1.png", "/room2.png"],
+      "amenities": {
+        "breakfast": true,
+        "parking": true,
+        "size": "312 sq ft",
+        "sleeps": 3,
+        "bedType": "2 Double Beds OR 1 King Bed",
+        "allInclusive": true,
+        "wifi": true
+      },
+      "refundable": {
+        "isRefundable": true,
+        "deadline": "Tue, Feb 3"
+      },
+      "price": {
+        "original": 80517,
+        "discounted": 40447,
+        "discount": 40070,
+        "currency": "EGP"
+      }
     },
-    "locationDescription" : "In Seattle (University District)",
-    "lowRate" : 119,
-    "metadata" : {
-      "path" : "/hotels/025f5e1a-27e4-11e6-a36c-9fede5552112"
+    {
+      "id": 2,
+      "name": "Junior Suite, Ocean View (U)",
+      "images": ["/room3.png", "/room4.png"],
+      "amenities": {
+        "breakfast": true,
+        "parking": true,
+        "size": "474 sq ft",
+        "sleeps": 3,
+        "bedType": "2 Double Beds OR 1 King Bed",
+        "allInclusive": true,
+        "wifi": true,
+        "bedrooms": 1
+      },
+      "refundable": {
+        "isRefundable": true,
+        "deadline": "Tue, Feb 3"
+      },
+      "price": {
+        "original": 86362,
+        "discounted": 43368,
+        "discount": 42994,
+        "currency": "EGP"
+      }
     },
-    "postalCode" : 98105,
-    "propertyCategory" : 1,
-    "proximityDistance" : 11.145046,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at Hotel Deca - A Noble House Hotel in Seattle (University District), you&apos;ll be minutes from Burke Museum of Natural History and Culture and close to",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/19023_103_t.jpg",
-    "tripAdvisorRating" : 4,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif"
-  }, {
-    "id" : "026355c4-27e4-11e6-b3f9-09f86925339f",
-    "type" : "hotel",
-    "name" : "W Seattle",
-    "created" : 1464777092747,
-    "modified" : 1464777092747,
-    "address1" : "1112 4th Ave",
-    "airportCode" : "SEA",
-    "amenityMask" : 7798785,
-    "city" : "Seattle",
-    "confidenceRating" : 5,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/213497/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 210,
-    "hotelId" : 213497,
-    "hotelInDestination" : true,
-    "hotelRating" : 4,
-    "location" : {
-      "latitude" : 47.60688,
-      "longitude" : -122.33361
+    {
+      "id": 3,
+      "name": "Double Room, 2 Bedrooms, Ocean View (U)",
+      "images": ["/room5.png", "/room1.png"],
+      "amenities": {
+        "breakfast": true,
+        "parking": true,
+        "size": "323 sq ft",
+        "sleeps": 6,
+        "bedType": "1 King Bed",
+        "allInclusive": true,
+        "wifi": true,
+        "bedrooms": 2
+      },
+      "refundable": {
+        "isRefundable": true,
+        "deadline": "Tue, Feb 3"
+      },
+      "price": {
+        "original": 120512,
+        "discounted": 60256,
+        "discount": 60256,
+        "currency": "EGP"
+      }
+    }
+  ],
+  "hotels": [
+    {
+      "id": "1",
+      "type": "hotel",
+      "name": "Motif Seattle",
+      "created": 1464777092568,
+      "modified": 1464777618676,
+      "address1": "1415 5th Ave",
+      "airportCode": "SEA",
+      "amenityMask": 7798786,
+      "city": "Seattle",
+      "confidenceRating": 52,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/125727/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 289,
+      "hotelId": 1257278,
+      "hotelInDestination": true,
+      "hotelRating": 4,
+      "location": {
+        "latitude": 47.60985,
+        "longitude": -122.33475
+      },
+      "locationDescription": "Near Pike Place Market",
+      "lowRate": 259,
+      "metadata": {
+        "path": "/hotels/0248058a-27e4-11e6-ace6-a9876eff01b3"
+      },
+      "postalCode": 98101,
+      "propertyCategory": 1,
+      "proximityDistance": 11.168453,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at Motif Seattle, you will be centrally located in Seattle, steps from 5th Avenue Theater and minutes from Pike Place Market. This 4-star hotel is within",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/50947_264_t.jpg",
+      "tripAdvisorRating": 3.5,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/3.5-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576456656066-2b4dc37f1db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552566626-52f8b828add9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
     },
-    "locationDescription" : "Near Pike Place Market",
-    "lowRate" : 175,
-    "metadata" : {
-      "path" : "/hotels/026355c4-27e4-11e6-b3f9-09f86925339f"
+    {
+      "id": "2",
+      "type": "hotel",
+      "name": "The Westin Seattle",
+      "created": 1464777092593,
+      "modified": 1464871217352,
+      "address1": "1900 5th Ave",
+      "airportCode": "SEA",
+      "amenityMask": 7806977,
+      "city": "Seattle",
+      "confidenceRating": 5,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/164122/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 259,
+      "hotelId": 164122,
+      "hotelInDestination": true,
+      "hotelRating": 4,
+      "location": {
+        "latitude": 47.61309,
+        "longitude": -122.33788
+      },
+      "locationDescription": "Near Pike Place Market",
+      "lowRate": 209,
+      "metadata": {
+        "path": "/hotels/024bd61a-27e4-11e6-ad95-35ed01160e57"
+      },
+      "postalCode": 98101,
+      "propertyCategory": 1,
+      "proximityDistance": 11.335604,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at The Westin Seattle, you'll be centrally laocated in Seattle, steps from Westlake Center and minutes from Pacific Place. This 4-star hotel is close to",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/16673_260_t.jpg",
+      "tripAdvisorRating": 4,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1595618528940-72ec00186f55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
     },
-    "postalCode" : 98101,
-    "propertyCategory" : 1,
-    "proximityDistance" : 11.09939,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at W Seattle, you&apos;ll be centrally located in Seattle, steps from Seattle Public Library and Safeco Headquarters. This 4-star hotel is close to Pike Place",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/284304_50_t.jpg",
-    "tripAdvisorRating" : 4,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif"
-  }, {
-    "id" : "0267c28a-27e4-11e6-ab3b-5f1a4c39ef62",
-    "type" : "hotel",
-    "name" : "Hotel Andra",
-    "created" : 1464777092776,
-    "modified" : 1464777092776,
-    "address1" : "2000 4th Ave",
-    "airportCode" : "SEA",
-    "amenityMask" : 1441795,
-    "city" : "Seattle",
-    "confidenceRating" : 45,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/119562/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 239.5368,
-    "hotelId" : 119562,
-    "hotelInDestination" : true,
-    "hotelRating" : 4,
-    "location" : {
-      "latitude" : 47.61318,
-      "longitude" : -122.34009
+    {
+      "id": "3",
+      "type": "hotel",
+      "name": "Sheraton Seattle Hotel",
+      "created": 1464777092619,
+      "modified": 1464777092619,
+      "address1": "1400 6th Ave",
+      "airportCode": "SEA",
+      "amenityMask": 262147,
+      "city": "Seattle",
+      "confidenceRating": 30,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/164116/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 320,
+      "hotelId": 164116,
+      "hotelInDestination": true,
+      "hotelRating": 4,
+      "location": {
+        "latitude": 47.61017,
+        "longitude": -122.33357
+      },
+      "locationDescription": "Near Pike Place Market",
+      "lowRate": 205,
+      "metadata": {
+        "path": "/hotels/024fcdba-27e4-11e6-af44-cd4c8e537e9c"
+      },
+      "postalCode": 98101,
+      "propertyCategory": 1,
+      "proximityDistance": 11.115907,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at Sheraton Seattle Hotel, you'll be centrally located in Seattle, steps from 5th Avenue Theater and Washington State Convention Center. This 4-star",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/25290_88_t.jpg",
+      "tripAdvisorRating": 4,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576866209365-e213df34edc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1559827260-dc66d52bef19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552566626-52f8b828add9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1615537368910-5bf63fe6ae0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
     },
-    "locationDescription" : "Near Pike Place Market",
-    "lowRate" : 189.4252,
-    "metadata" : {
-      "path" : "/hotels/0267c28a-27e4-11e6-ab3b-5f1a4c39ef62"
+    {
+      "id": "4",
+      "type": "hotel",
+      "name": "The Edgewater - A Noble House Hotel",
+      "created": 1464777092643,
+      "modified": 1464777092643,
+      "address1": "Pier 67, 2411 Alaskan Way",
+      "airportCode": "SEA",
+      "amenityMask": 5701635,
+      "city": "Burlingame",
+      "confidenceRating": 95,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/127092/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 269,
+      "hotelId": 127092,
+      "hotelInDestination": true,
+      "hotelRating": 4,
+      "location": {
+        "latitude": 47.61252,
+        "longitude": -122.35013
+      },
+      "locationDescription": "Near Pike Place Market",
+      "lowRate": 179,
+      "metadata": {
+        "path": "/hotels/0253773a-27e4-11e6-8ffe-278d3b0d044c"
+      },
+      "postalCode": 98121,
+      "propertyCategory": 1,
+      "proximityDistance": 11.898841,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at The Edgewater - A Noble House Hotel, you'll be centrally located in Seattle, steps from Bell Street Cruise Terminal at Pier 66 and minutes from",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/11133_169_t.jpg",
+      "tripAdvisorRating": 4,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1559347254-2d8dc63c66d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576866209365-e213df34edc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
     },
-    "postalCode" : 98121,
-    "propertyCategory" : 1,
-    "proximityDistance" : 11.438348,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at Hotel Andra, you&apos;ll be centrally located in Seattle, minutes from Westlake Center and Pike Place Market. This 4-star hotel is within close proximity",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/16950_158_t.jpg",
-    "tripAdvisorRating" : 4.5,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.5-12345-4.gif"
-  }, {
-    "id" : "026ccbae-27e4-11e6-afa7-536abd83599c",
-    "type" : "hotel",
-    "name" : "The Maxwell Hotel - Pineapple Hospitality",
-    "created" : 1464777092809,
-    "modified" : 1464777092809,
-    "address1" : "300 Roy St",
-    "airportCode" : "SEA",
-    "amenityMask" : 7798786,
-    "city" : "Seattle",
-    "confidenceRating" : 95,
-    "countryCode" : "US",
-    "deepLink" : "http://www.travelnow.com/templates/55505/hotels/342070/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
-    "highRate" : 289,
-    "hotelId" : 342070,
-    "hotelInDestination" : true,
-    "hotelRating" : 3,
-    "location" : {
-      "latitude" : 47.62561,
-      "longitude" : -122.35129
+    {
+      "id": "5",
+      "type": "hotel",
+      "name": "Hotel Max, a Provenance Hotel",
+      "created": 1464777092667,
+      "modified": 1464777092667,
+      "address1": "620 Stewart St",
+      "airportCode": "SEA",
+      "amenityMask": 3,
+      "city": "Burlingame",
+      "confidenceRating": 52,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/113426/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 188.202,
+      "hotelId": 113426,
+      "hotelInDestination": true,
+      "hotelRating": 3.5,
+      "location": {
+        "latitude": 47.61381,
+        "longitude": -122.33686
+      },
+      "locationDescription": "Near Pike Place Market",
+      "lowRate": 187.202,
+      "metadata": {
+        "path": "/hotels/025720ba-27e4-11e6-8744-efc6f2251051"
+      },
+      "postalCode": 98101,
+      "propertyCategory": 1,
+      "proximityDistance": 11.293709,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at Hotel Max, a Provenance Hotel in Seattle (Belltown), you&apos;ll be minutes from Westlake Center and Washington State Convention Center. This hotel is",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/28647_30_t.jpg",
+      "tripAdvisorRating": 4,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1595618528940-72ec00186f55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
     },
-    "locationDescription" : "Near Pacific Northwest Ballet",
-    "lowRate" : 229,
-    "metadata" : {
-      "path" : "/hotels/026ccbae-27e4-11e6-afa7-536abd83599c"
+    {
+      "id": "6",
+      "type": "hotel",
+      "name": "Hotel Monaco Seattle, a Kimpton Hotel",
+      "created": 1464777092694,
+      "modified": 1464777092694,
+      "address1": "1101 4th Ave",
+      "airportCode": "SEA",
+      "amenityMask": 1310720,
+      "city": "Seattle",
+      "confidenceRating": 52,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/132138/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 489,
+      "hotelId": 132138,
+      "hotelInDestination": true,
+      "hotelRating": 4,
+      "location": {
+        "latitude": 47.60682,
+        "longitude": -122.33358
+      },
+      "locationDescription": "Near Pike Place Market",
+      "lowRate": 189,
+      "metadata": {
+        "path": "/hotels/025b3f6a-27e4-11e6-80d7-1ba3f907ab71"
+      },
+      "postalCode": 98101,
+      "propertyCategory": 1,
+      "proximityDistance": 11.097676,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at Hotel Monaco Seattle, a Kimpton Hotel, you&apos;ll be centrally located in Seattle, steps from Seattle Public Library and Safeco Headquarters. This 4-star",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/62800_122_t.jpg",
+      "tripAdvisorRating": 4.5,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.5-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576456656066-2b4dc37f1db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
     },
-    "postalCode" : 98109,
-    "propertyCategory" : 1,
-    "proximityDistance" : 12.074359,
-    "proximityUnit" : "MI",
-    "rateCurrencyCode" : "USD",
-    "shortDescription" : "With a stay at The Maxwell Hotel - Pineapple Hospitality, you&apos;ll be centrally located in Seattle, steps from Pacific Northwest Ballet and Teatro ZinZanni. This",
-    "stateProvinceCode" : "WA",
-    "thumbNailUrl" : "/thumbnails/3445681_43_t.jpg",
-    "tripAdvisorRating" : 4.5,
-    "tripAdvisorRatingUrl" : "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.5-12345-4.gif"
-  }]
-  }
+    {
+      "id": "7",
+      "type": "hotel",
+      "name": "Hotel Deca - A Noble House Hotel",
+      "created": 1464777092721,
+      "modified": 1464777092721,
+      "address1": "4507 Brooklyn Avenue NE",
+      "airportCode": "SEA",
+      "amenityMask": 3,
+      "city": "Burlingame",
+      "confidenceRating": 95,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/191964/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 159,
+      "hotelId": 191964,
+      "hotelInDestination": true,
+      "hotelRating": 3.5,
+      "location": {
+        "latitude": 47.66143,
+        "longitude": -122.31429
+      },
+      "locationDescription": "In Seattle (University District)",
+      "lowRate": 119,
+      "metadata": {
+        "path": "/hotels/025f5e1a-27e4-11e6-a36c-9fede5552112"
+      },
+      "postalCode": 98105,
+      "propertyCategory": 1,
+      "proximityDistance": 11.145046,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at Hotel Deca - A Noble House Hotel in Seattle (University District), you&apos;ll be minutes from Burke Museum of Natural History and Culture and close to",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/19023_103_t.jpg",
+      "tripAdvisorRating": 4,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576456656066-2b4dc37f1db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
+    },
+    {
+      "id": "8",
+      "type": "hotel",
+      "name": "W Seattle",
+      "created": 1464777092747,
+      "modified": 1464777092747,
+      "address1": "1112 4th Ave",
+      "airportCode": "SEA",
+      "amenityMask": 7798785,
+      "city": "Seattle",
+      "confidenceRating": 5,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/213497/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 210,
+      "hotelId": 213497,
+      "hotelInDestination": true,
+      "hotelRating": 4,
+      "location": {
+        "latitude": 47.60688,
+        "longitude": -122.33361
+      },
+      "locationDescription": "Near Pike Place Market",
+      "lowRate": 175,
+      "metadata": {
+        "path": "/hotels/026355c4-27e4-11e6-b3f9-09f86925339f"
+      },
+      "postalCode": 98101,
+      "propertyCategory": 1,
+      "proximityDistance": 11.09939,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at W Seattle, you&apos;ll be centrally located in Seattle, steps from Seattle Public Library and Safeco Headquarters. This 4-star hotel is close to Pike Place",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/284304_50_t.jpg",
+      "tripAdvisorRating": 4,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.0-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1595618528940-72ec00186f55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576456656066-2b4dc37f1db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
+    },
+    {
+      "id": "9",
+      "type": "hotel",
+      "name": "Hotel Andra",
+      "created": 1464777092776,
+      "modified": 1464777092776,
+      "address1": "2000 4th Ave",
+      "airportCode": "SEA",
+      "amenityMask": 1441795,
+      "city": "Seattle",
+      "confidenceRating": 45,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/119562/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 239.5368,
+      "hotelId": 119562,
+      "hotelInDestination": true,
+      "hotelRating": 4,
+      "location": {
+        "latitude": 47.61318,
+        "longitude": -122.34009
+      },
+      "locationDescription": "Near Pike Place Market",
+      "lowRate": 189.4252,
+      "metadata": {
+        "path": "/hotels/0267c28a-27e4-11e6-ab3b-5f1a4c39ef62"
+      },
+      "postalCode": 98121,
+      "propertyCategory": 1,
+      "proximityDistance": 11.438348,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at Hotel Andra, you&apos;ll be centrally located in Seattle, minutes from Westlake Center and Pike Place Market. This 4-star hotel is within close proximity",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/16950_158_t.jpg",
+      "tripAdvisorRating": 4.5,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.5-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576456656066-2b4dc37f1db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
+    },
+    {
+      "id": "10",
+      "type": "hotel",
+      "name": "The Maxwell Hotel - Pineapple Hospitality",
+      "created": 1464777092809,
+      "modified": 1464777092809,
+      "address1": "300 Roy St",
+      "airportCode": "SEA",
+      "amenityMask": 7798786,
+      "city": "Seattle",
+      "confidenceRating": 95,
+      "countryCode": "US",
+      "deepLink": "http://www.travelnow.com/templates/55505/hotels/342070/overview?lang=en&amp;currency=USD&amp;standardCheckin=null/null/null&amp;standardCheckout=null/null/null",
+      "highRate": 289,
+      "hotelId": 342070,
+      "hotelInDestination": true,
+      "hotelRating": 3,
+      "location": {
+        "latitude": 47.62561,
+        "longitude": -122.35129
+      },
+      "locationDescription": "Near Pacific Northwest Ballet",
+      "lowRate": 229,
+      "metadata": {
+        "path": "/hotels/026ccbae-27e4-11e6-afa7-536abd83599c"
+      },
+      "postalCode": 98109,
+      "propertyCategory": 1,
+      "proximityDistance": 12.074359,
+      "proximityUnit": "MI",
+      "rateCurrencyCode": "USD",
+      "shortDescription": "With a stay at The Maxwell Hotel - Pineapple Hospitality, you&apos;ll be centrally located in Seattle, steps from Pacific Northwest Ballet and Teatro ZinZanni. This",
+      "stateProvinceCode": "WA",
+      "thumbNailUrl": "/thumbnails/3445681_43_t.jpg",
+      "tripAdvisorRating": 4.5,
+      "tripAdvisorRatingUrl": "http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.5-12345-4.gif",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1595618528940-72ec00186f55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576456656066-2b4dc37f1db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1559347254-2d8dc63c66d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "budget",
+      "description": "Affordable hotels with basic services"
+    },
+    {
+      "id": 2,
+      "name": "luxury",
+      "description": "High-end hotels with premium services"
+    },
+    {
+      "id": 3,
+      "name": "boutique",
+      "description": "Small, design-focused hotels"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "category": "hotel-exterior",
+      "title": "Modern Hotel Exterior",
+      "url": "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 2,
+      "category": "hotel-lobby",
+      "title": "Luxury Hotel Lobby",
+      "url": "https://images.unsplash.com/photo-1595618528940-72ec00186f55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 3,
+      "category": "bedroom",
+      "title": "Luxury Bedroom Suite",
+      "url": "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 4,
+      "category": "bathroom",
+      "title": "Modern Bathroom",
+      "url": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 5,
+      "category": "pool",
+      "title": "Resort Swimming Pool",
+      "url": "https://images.unsplash.com/photo-1576456656066-2b4dc37f1db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 6,
+      "category": "dining",
+      "title": "Restaurant & Dining",
+      "url": "https://images.unsplash.com/photo-1552566626-52f8b828add9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 7,
+      "category": "spa",
+      "title": "Spa & Wellness Center",
+      "url": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 8,
+      "category": "gym",
+      "title": "Fitness Center",
+      "url": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 9,
+      "category": "beach-view",
+      "title": "Beach View Room",
+      "url": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 10,
+      "category": "conference",
+      "title": "Conference Room",
+      "url": "https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 11,
+      "category": "lounge",
+      "title": "Hotel Lounge",
+      "url": "https://images.unsplash.com/photo-1615537368910-5bf63fe6ae0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 12,
+      "category": "rooftop",
+      "title": "Rooftop Terrace",
+      "url": "https://images.unsplash.com/photo-1559347254-2d8dc63c66d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 13,
+      "category": "suite-bedroom",
+      "title": "Luxury Suite Bedroom",
+      "url": "https://images.unsplash.com/photo-1576866209365-e213df34edc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 14,
+      "category": "room-view",
+      "title": "Room with City View",
+      "url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 15,
+      "category": "hallway",
+      "title": "Hotel Corridor",
+      "url": "https://images.unsplash.com/photo-1562583528-f69dd6e4eeca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+    },
+    {
+      "id": 16,
+      "category": "room1",
+      "title": "Room 1 - King Bed",
+      "url": "/room1.png"
+    },
+    {
+      "id": 17,
+      "category": "room2",
+      "title": "Room 2 - Twin Beds",
+      "url": "/room2.png"
+    },
+    {
+      "id": 18,
+      "category": "room3",
+      "title": "Room 3 - Suite",
+      "url": "/room3.png"
+    },
+    {
+      "id": 19,
+      "category": "room4",
+      "title": "Room 4 - Ocean View",
+      "url": "/room4.png"
+    },
+    {
+      "id": 20,
+      "category": "room5",
+      "title": "Room 5 - Deluxe",
+      "url": "/room5.png"
+    },
+    {
+      "id": 21,
+      "category": "spa-main",
+      "title": "Spa Main Area",
+      "url": "/spa-main.png"
+    },
+    {
+      "id": 22,
+      "category": "spa-main2",
+      "title": "Spa Treatment Area",
+      "url": "/spa-main2.png"
+    },
+    {
+      "id": 23,
+      "category": "spa-main3",
+      "title": "Spa Relaxation Area",
+      "url": "/spa-main3.png"
+    },
+    {
+      "id": 24,
+      "category": "card-photo",
+      "title": "Featured Card Photo",
+      "url": "/card-photo.jpg"
+    },
+    {
+      "id": 25,
+      "category": "hero-image",
+      "title": "Hero Image",
+      "url": "/hero-img.jpg"
+    }
+  ],
+  "hotelGalleries": [
+    {
+      "hotelId": "0248058a-27e4-11e6-ace6-a9876eff01b3",
+      "hotelName": "Motif Seattle",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576456656066-2b4dc37f1db7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552566626-52f8b828add9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
+    },
+    {
+      "hotelId": "024bd61a-27e4-11e6-ad95-35ed01160e57",
+      "hotelName": "The Westin Seattle",
+      "images": [
+        "https://images.unsplash.com/photo-1595618528940-72ec00186f55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
+    },
+    {
+      "hotelId": "024fcdba-27e4-11e6-af44-cd4c8e537e9c",
+      "hotelName": "Sheraton Seattle Hotel",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576866209365-e213df34edc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1559827260-dc66d52bef19?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552566626-52f8b828add9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1615537368910-5bf63fe6ae0b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
+    },
+    {
+      "hotelId": "0253773a-27e4-11e6-8ffe-278d3b0d044c",
+      "hotelName": "The Edgewater - A Noble House Hotel",
+      "images": [
+        "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1631049307038-da5ec5d79645?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1559347254-2d8dc63c66d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1576866209365-e213df34edc5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
+    },
+    {
+      "hotelId": "025720ba-27e4-11e6-8744-efc6f2251051",
+      "hotelName": "Hotel Max, a Provenance Hotel",
+      "images": [
+        "https://images.unsplash.com/photo-1584132604003-c7b6b2b80b9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1595618528940-72ec00186f55?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+        "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+      ]
+    }
+  ]
+}

@@ -48,6 +48,14 @@ Just open your web browser, postman or favourite tool, and type the following ur
 
 ```
 http://localhost:3000/api/hotels
+Available API Endpoints:
+You can now access all this data through the mock API:
+
+GET /api/destinations - All destination categories
+GET /api/featuredStays - Featured stay cards
+GET /api/locations - Hotel locations
+GET /api/rooms - Room options
+GET /api/hotels - Original hotel data
 ```
 
 - To get the details of a given hotel (last url chunk is the id of the hotel):
